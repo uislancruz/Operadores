@@ -13,8 +13,7 @@ public class OperadoresAritimeticos {
         int n2 = 5;
         float m = n1 + n2 /2;
         System.out.println("A media é igual a: " +m);
-        
-               
+                       
     }
     
 }
