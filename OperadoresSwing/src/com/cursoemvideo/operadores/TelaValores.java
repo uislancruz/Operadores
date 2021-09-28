@@ -134,8 +134,12 @@ public class TelaValores extends javax.swing.JFrame {
 
     private void btnDividirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDividirActionPerformed
         // TODO add your handling code here:
-         int n1 = Integer.parseInt(txtNum.getText());
-        int n2 = Integer.parseInt(txtDem.getText());
+         int n = Integer.parseInt(txtNum.getText());
+        int d = Integer.parseInt(txtDem.getText());
+        float div = n / d;
+        float res = n % d;
+        lblDiv.setText(Float.toString(div));
+        lblResto.setText(Float.toString(res));
         
        
         
