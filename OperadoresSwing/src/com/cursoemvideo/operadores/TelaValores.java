@@ -53,6 +53,11 @@ public class TelaValores extends javax.swing.JFrame {
 
         btnDividir.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         btnDividir.setText("Dividir");
+        btnDividir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDividirActionPerformed(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jLabel3.setText("Divisão");
@@ -126,6 +131,18 @@ public class TelaValores extends javax.swing.JFrame {
     private void txtNumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNumActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNumActionPerformed
+
+    private void btnDividirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDividirActionPerformed
+        // TODO add your handling code here:
+        int n1 = Integer.parseInt(txtNum.getText().toString());
+        int n2 = Integer.parseInt(txtDem.getText().toString());
+        int div = n1 /n2;
+        int resto = (n1 + n2)%2;
+        lblDiv.setText(Integer.toString(div));
+        lblResto.setText(Integer.toString(resto));
+        
+        
+    }//GEN-LAST:event_btnDividirActionPerformed
 
     /**
      * @param args the command line arguments
