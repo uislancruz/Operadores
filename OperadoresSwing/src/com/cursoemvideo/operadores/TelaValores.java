@@ -35,7 +35,7 @@ public class TelaValores extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         lblDiv = new javax.swing.JLabel();
-        lblResto = new javax.swing.JLabel();
+        lblRes = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -52,7 +52,7 @@ public class TelaValores extends javax.swing.JFrame {
         jLabel2.setText("Denominador");
 
         btnDividir.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        btnDividir.setText("Dividir");
+        btnDividir.setText("Calcular");
         btnDividir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDividirActionPerformed(evt);
@@ -63,11 +63,11 @@ public class TelaValores extends javax.swing.JFrame {
         jLabel3.setText("Divisão");
 
         jLabel4.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        jLabel4.setText("Resto");
+        jLabel4.setText("Raiz");
 
         lblDiv.setText("0");
 
-        lblResto.setText("0");
+        lblRes.setText("0");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -90,12 +90,12 @@ public class TelaValores extends javax.swing.JFrame {
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                     .addComponent(jLabel4)
                                     .addGap(35, 35, 35)
-                                    .addComponent(lblResto, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(lblRes, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(txtNum, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtDem, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addContainerGap(52, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(84, 84, 84)
                 .addComponent(btnDividir)
@@ -121,7 +121,7 @@ public class TelaValores extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(lblResto))
+                    .addComponent(lblRes))
                 .addGap(55, 55, 55))
         );
 
@@ -136,10 +136,10 @@ public class TelaValores extends javax.swing.JFrame {
         // TODO add your handling code here:
         int n1 = Integer.parseInt(txtNum.getText().toString());
         int n2 = Integer.parseInt(txtDem.getText().toString());
-        int div = n1 /n2;
-        int resto = (n1 + n2)%2;
-        lblDiv.setText(Integer.toString(div));
-        lblResto.setText(Integer.toString(resto));
+        float div = n1 /n2;
+        double resto = Math.sqrt(n1);
+        lblDiv.setText(Float.toString(div));
+        lblRes.setText(Double.toString(resto));
         
         
     }//GEN-LAST:event_btnDividirActionPerformed
@@ -186,7 +186,7 @@ public class TelaValores extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel lblDiv;
-    private javax.swing.JLabel lblResto;
+    private javax.swing.JLabel lblRes;
     private javax.swing.JTextField txtDem;
     private javax.swing.JTextField txtNum;
     // End of variables declaration//GEN-END:variables
