@@ -5,6 +5,8 @@
  */
 package com.cursoemvideo.calc;
 
+import java.text.DecimalFormat;
+
 /**
  *
  * @author uisla
@@ -167,12 +169,18 @@ public class SuperCalc extends javax.swing.JFrame {
     private void bntCalcActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntCalcActionPerformed
         // TODO add your handling code here:
         
+        DecimalFormat deci = new DecimalFormat("0.00");
          int idvalor = Integer.parseInt(txtValor.getValue().toString());
          int div = idvalor % 2;
          double exp = Math.pow(idvalor,3);
-                 
+         double raizq = Math.sqrt(idvalor);
+         double raizc = Math.cbrt(idvalor);    
          lblResDiv.setText(Integer.toString(div));
          lblCubo.setText(Double.toString(exp));
+         lblRaizQ.setText(Double.toString(raizq)); 
+         lblRaizC.setText(Double.toString(raizc));
+         
+         
          
         
         
