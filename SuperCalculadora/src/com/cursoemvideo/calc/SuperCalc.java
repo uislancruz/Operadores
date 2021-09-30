@@ -43,7 +43,7 @@ public class SuperCalc extends javax.swing.JFrame {
         lblCubo = new javax.swing.JLabel();
         lblRaizQ = new javax.swing.JLabel();
         lblRaizC = new javax.swing.JLabel();
-        lvlValorAb = new javax.swing.JLabel();
+        lblValorAb = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -87,7 +87,7 @@ public class SuperCalc extends javax.swing.JFrame {
 
         lblRaizC.setText("0");
 
-        lvlValorAb.setText("0");
+        lblValorAb.setText("0");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -120,7 +120,7 @@ public class SuperCalc extends javax.swing.JFrame {
                             .addComponent(lblCubo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(lblRaizQ, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(lblRaizC, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lvlValorAb, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE))
+                            .addComponent(lblValorAb, javax.swing.GroupLayout.DEFAULT_SIZE, 112, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
@@ -156,7 +156,7 @@ public class SuperCalc extends javax.swing.JFrame {
                         .addGap(31, 31, 31)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel7)
-                            .addComponent(lvlValorAb))
+                            .addComponent(lblValorAb))
                         .addGap(61, 61, 61))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -174,11 +174,14 @@ public class SuperCalc extends javax.swing.JFrame {
          int div = idvalor % 2;
          double exp = Math.pow(idvalor,3);
          double raizq = Math.sqrt(idvalor);
-         double raizc = Math.cbrt(idvalor);    
+         double raizc = Math.cbrt(idvalor);
+         int valorab = Math.abs(idvalor);
+         
          lblResDiv.setText(Integer.toString(div));
          lblCubo.setText(Double.toString(exp));
          lblRaizQ.setText(Double.toString(raizq)); 
          lblRaizC.setText(Double.toString(raizc));
+         lblValorAb.setText(Integer.toString(valorab));
          
          
          
@@ -235,7 +238,7 @@ public class SuperCalc extends javax.swing.JFrame {
     private javax.swing.JLabel lblRaizC;
     private javax.swing.JLabel lblRaizQ;
     private javax.swing.JLabel lblResDiv;
-    private javax.swing.JLabel lvlValorAb;
+    private javax.swing.JLabel lblValorAb;
     private javax.swing.JSpinner txtValor;
     // End of variables declaration//GEN-END:variables
 }
