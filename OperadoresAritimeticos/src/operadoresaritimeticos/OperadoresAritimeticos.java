@@ -25,8 +25,8 @@ public class OperadoresAritimeticos {
        int ar = (int)Math.round(v);
         System.out.println(ar);
         
-       //para melhor entendimento, melhor sempre usar o round, pois ele faz arrendodamento aritimeticos, ex: 8,5 = 9 ou 8,4 igual a 8
-       
+       //para melhor entendimento, melhor sempre usar o round, pois ele faz arredondamento aritimeticos, ex: 8,5 = 9 ou 8,4 igual a 8
+       // temos ciel que arredonda para cima e o floor que arredonda para baixo
         
                
     }
