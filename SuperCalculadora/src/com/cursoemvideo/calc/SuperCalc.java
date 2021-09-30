@@ -169,8 +169,10 @@ public class SuperCalc extends javax.swing.JFrame {
         
          int idvalor = Integer.parseInt(txtValor.getValue().toString());
          int div = idvalor % 2;
+         double exp = Math.pow(idvalor,3);
+                 
          lblResDiv.setText(Integer.toString(div));
-         
+         lblCubo.setText(Double.toString(exp));
          
         
         
